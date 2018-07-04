@@ -1,0 +1,14 @@
+.default-button {
+	padding: 5px 10px;
+	margin: 5px;
+	border-style: none;
+	background: #007bff;
+	color: white;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.default-button:hover {
+	cursor: pointer;
+	background: #4b4b4b;
+	color: #ffc107;
+}

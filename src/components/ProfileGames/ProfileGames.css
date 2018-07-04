@@ -1,0 +1,11 @@
+.steam-profile-games {
+	margin: 0 auto;
+	box-sizing: border-box;
+	display: flex;
+	max-width: 560px;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid #000;
+	background: #6c757d;
+	color: white;
+}	
