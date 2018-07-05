@@ -25,7 +25,6 @@ class SearchForm extends React.Component {
 
 	render() {	
 		const { getProfileInfo, profilesState } = this.props;
-		console.log('value', this.state.inputValue);
 		let btnClassName = "search-btn";
 		this.state.inputValue ? btnClassName += " search-btn-enabled" : "";
 		let inputClassName = "search-input";

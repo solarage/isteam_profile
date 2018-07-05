@@ -2,6 +2,8 @@ import { UPDATE_INPUT_FIELD } from '../actions/actions';
 import { GET_PROFILE_DATA } from '../actions/actions';
 import { GET_PROFILE_QUERY } from '../actions/actions';
 import { GET_GAMES_DATA } from '../actions/actions';
+import { GET_STEAM_LEVEL } from '../actions/actions';
+
  
 
 const initialState = {
@@ -27,6 +29,10 @@ const queries = (state = initialState, action) => {
 			return {
 				...state, loading: false
 			};
+		case GET_STEAM_LEVEL :
+			return {
+				...state, levelSteam: action.levelSteam			
+			}
 	}
 
 	return state;

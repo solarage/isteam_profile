@@ -11,6 +11,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import reducer from '../reducers';
 import App from '../containers/App/App.jsx';
 import ProfileGames from '../components/ProfileGames/ProfileGames.jsx';
+import ProfileGamesList from '../components/ProfileGamesList/ProfileGamesList.jsx';
+import ProfileGamesContainer from '../containers/ProfileGamesContainer/ProfileGamesContainer.jsx';
 
 const history = createBrowserHistory();
 
@@ -33,7 +35,7 @@ ReactDOM.render(
 			<div>
 				<Switch>
 					<Route exact path="/" component={App} />
-					<Route path="/games" component={ProfileGames} />
+					<Route path="/games" component={ProfileGamesContainer} />
 				</Switch>
 			</div>
 		</ConnectedRouter>

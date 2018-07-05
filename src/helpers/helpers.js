@@ -2,6 +2,44 @@ export function validateInput(input) {
 	input.value = input.value.replace(/[^0-9]/, "");
 }
 
+export function convertUnixToObjDate(unixDate) {
+	let date = new Date(unixDate * 1000).toLocaleString().slice(0, 10);
+	return date;
+}
+
+
+export function sortArray(array, fieldName, sortBy) {
+	let sortedArray = [];
+
+	function asc(a, b) {
+		if(a[fieldName] < b[fieldName]) {
+			return -1;
+		}
+		if(a[fieldName] > b[fieldName]) {
+			return 1;
+		}
+		return 0; //может быть равно b
+	}
+
+	function desc(a, b) {
+		if(a[fieldName] < b[fieldName]) {
+			return 1;
+		}
+		if(a[fieldName] > b[fieldName]) {
+			return -1;
+		}
+		return 0; //может быть равно b
+	}
+
+	if (sortBy === "desc") { 
+		sortedArray = array.sort(desc); 
+	} else {
+		sortedArray = array.sort(asc);
+	}
+
+	return sortedArray;
+}
+
 export function getPlayerSummary(key, id) {
 
 	const url = `https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=${key}&steamids=${id}`;

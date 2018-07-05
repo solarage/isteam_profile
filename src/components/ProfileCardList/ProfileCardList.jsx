@@ -1,14 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import ProfileCard from '../ProfileCard/ProfileCard.jsx';
 
 
-const ProfileCardList = ({ profilesState }) => {
-	console.log('profilesState', profilesState);
+const ProfileCardList = ({ profilesState, queriesState, getGames }) => {
 	return(
 		profilesState.map(profileField => 
-		<ProfileCard key={profileField.steamid} profileField={profileField} />	
+		<ProfileCard key={profileField.steamid} queriesState={queriesState} profileField={profileField} getGames={getGames}/>	
 		)
 	)
 }

@@ -1,22 +1,7 @@
 import { GET_GAMES_DATA } from '../actions/actions';
 
 const initialState = [
-	{
-		steamid: null,
-		game_count: null,
-		appid: null,
-		playtime_forever: null,
-		name: null,
-		img: null
-	},
-	{
-		steamid: null,
-		game_count: null,
-		appid: null,
-		playtime_forever: null,
-		name: null,
-		img: null
-	}
+
 ];
 
 const games = (state = initialState, action) => {
@@ -25,7 +10,10 @@ const games = (state = initialState, action) => {
 			return [
 				...state,
 				{
-					data: action.data
+					appid:  action.appid,
+					playtime:  action.playtime,
+					name: action.name,
+					img: action.img
 				}
 			]
 	}

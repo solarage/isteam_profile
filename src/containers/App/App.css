@@ -1,10 +1,19 @@
 h1 {
+	text-align: center;
+	color: #000;
+}
+h1:first-letter {
 	color: #007bff;
 }
-h1, h3 {
+h3 {
 	text-align: center;
+	color: #ffc107
 }
 .wrapper {
 	margin: 0 auto;
 	text-align: center;
+}
+
+.logo {
+	height: 80px;
 }
