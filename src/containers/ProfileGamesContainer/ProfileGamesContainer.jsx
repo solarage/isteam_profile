@@ -1,5 +1,6 @@
 import React, { Container } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import './ProfileGamesContainer.css';
 
@@ -13,7 +14,6 @@ class ProfileGamesContainer extends React.Component {
 	constructor(props) {
 		super(props)
 
-		let sortBy = "desc";
 	}
 
 	render() {
@@ -34,13 +34,11 @@ class ProfileGamesContainer extends React.Component {
 	}
 
 	handleSort = (event) => {
-		if (this.sortBy === "asc") { 
-			this.sortBy = "desc"
+		if (this.props.sortFields.sortBy === "asc") { 
+			this.props.upSortFields("desc")
 		} else {
-			this.sortBy = "asc"
+			this.props.upSortFields("asc") 
 		};
-
-		this.props.dispatch(updateSortFields(this.sortBy));
 	}
 }
 
@@ -54,4 +52,10 @@ const mapStateToProps = (state) => {
 	
 }
 
-export default connect(mapStateToProps)(ProfileGamesContainer);
+const saveActionsToProps = (dispatch) => {
+  return {
+      upSortFields: bindActionCreators(updateSortFields, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, saveActionsToProps)(ProfileGamesContainer);

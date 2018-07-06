@@ -6,10 +6,12 @@ import { GET_STEAM_LEVEL } from '../actions/actions';
 
  
 
-const initialState = {
-	steamId: "",
-	loading: false
-};
+const initialState = localStorage.getItem('queries') ? 
+	JSON.parse(localStorage.getItem('queries')) : 
+	{
+		steamId: "",
+		loading: false
+	};
 
 const queries = (state = initialState, action) => {
 	switch(action.type) {

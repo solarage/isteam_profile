@@ -1,8 +1,6 @@
 import { GET_PROFILE_DATA } from '../actions/actions';
 
-const initialState = [
-
-];
+const initialState = localStorage.getItem('profiles') ? JSON.parse(localStorage.getItem('profiles')) : [];
 
 const profiles = (state = initialState, action) => {
 	switch(action.type) {

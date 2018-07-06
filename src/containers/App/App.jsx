@@ -39,10 +39,12 @@ class App extends Component {
 		event.preventDefault();
 		this.props.steamActions.getProfData(this.props.queriesState.steamId);
 		this.props.steamActions.getSteamLvl(this.props.queriesState.steamId);
+		this.props.steamActions.getGamesData(this.props.queriesState.steamId);
+
 	}
 
 	getGames = () => {
-		this.props.steamActions.getGamesData(this.props.queriesState.steamId);
+		// this.props.steamActions.getGamesData(this.props.queriesState.steamId);
 	}
 
 }
