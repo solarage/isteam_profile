@@ -3,6 +3,7 @@ import { GET_PROFILE_DATA } from '../actions/actions';
 import { GET_PROFILE_QUERY } from '../actions/actions';
 import { GET_GAMES_DATA } from '../actions/actions';
 import { GET_STEAM_LEVEL } from '../actions/actions';
+import { REMOVE_DATA } from '../actions/actions';
 
  
 
@@ -35,6 +36,11 @@ const queries = (state = initialState, action) => {
 			return {
 				...state, levelSteam: action.levelSteam			
 			}
+		case REMOVE_DATA :
+			return 	{
+				steamId: "",
+				loading: false
+			};
 	}
 
 	return state;

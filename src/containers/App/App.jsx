@@ -11,7 +11,7 @@ import ProfileGames from '../../components/ProfileGames/ProfileGames.jsx';
 import ProfileCardList from '../../components/ProfileCardList/ProfileCardList.jsx';
 import Preloader from '../../components/Preloader/Preloader.jsx';
 
-import { getProfileData, getSteamLevel, getGamesData, updateInputField } from '../../actions/actions';
+import { getProfileData, getSteamLevel, getGamesData, updateInputField, removeData } from '../../actions/actions';
 
 class App extends Component {
 	constructor(props) {
@@ -63,7 +63,8 @@ const saveActionsToProps = (dispatch) => {
 			getProfData: bindActionCreators(getProfileData, dispatch),
 			getSteamLvl: bindActionCreators(getSteamLevel, dispatch),
 			getGamesData: bindActionCreators(getGamesData, dispatch),
-			upInputField: bindActionCreators(updateInputField, dispatch)
+			upInputField: bindActionCreators(updateInputField, dispatch),
+			removeData: bindActionCreators(removeData, dispatch)
 		}
 	}
 }

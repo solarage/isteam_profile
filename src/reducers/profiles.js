@@ -1,4 +1,4 @@
-import { GET_PROFILE_DATA } from '../actions/actions';
+import { GET_PROFILE_DATA, REMOVE_DATA } from '../actions/actions';
 
 const initialState = localStorage.getItem('profiles') ? JSON.parse(localStorage.getItem('profiles')) : [];
 
@@ -18,6 +18,8 @@ const profiles = (state = initialState, action) => {
 					address: action.address
 				}
 			];
+		case REMOVE_DATA :
+			return [];
 	}
 
 	return state;

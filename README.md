@@ -2,8 +2,8 @@
 Using Steam Web API.
 
 ![screenshot-2018-7-5 isteam_profile](https://user-images.githubusercontent.com/35805922/42316212-e856aa8c-8051-11e8-8895-a6a1176a7653.png)
-![screenshot-2018-7-5 isteam_profile 1](https://user-images.githubusercontent.com/35805922/42314763-70c0564c-804e-11e8-9f52-23bbd557bf67.png)
-![screenshot-2018-7-5 isteam_profile 2](https://user-images.githubusercontent.com/35805922/42314784-7ac3c9ee-804e-11e8-9d6c-6e940c9e8580.png)
+![screenshot-2018-7-6 isteam_profile 1](https://user-images.githubusercontent.com/35805922/42394343-7ad74a18-8162-11e8-8743-2ceb9a390217.png)
+![screenshot-2018-7-6 isteam_profile 2](https://user-images.githubusercontent.com/35805922/42394354-85ab538a-8162-11e8-9785-0f0f528b5967.png)
 
 
 1. Clone or download repository.

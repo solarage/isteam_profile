@@ -4,6 +4,7 @@ export const GET_GAMES_DATA = 'GET_GAMES_DATA';
 export const GET_STEAM_LEVEL = 'GET_STEAM_LEVEL';
 export const UPDATE_INPUT_FIELD = 'UPDATE_INPUT_FIELD';
 export const UPDATE_SORT_FIELDS = 'UPDATE_SORT_FIELDS';
+export const REMOVE_DATA = 'REMOVE_DATA';
 
 import key from '../webApiKey'; 
 // import { getPlayerSummary, getSteamLevel, getOwnedGames } from '../helpers/helpers';
@@ -146,5 +147,11 @@ export const updateSortFields = (sortBy) => {
 	return {
 		type: UPDATE_SORT_FIELDS,
 		sortBy
+	}
+}
+
+export const removeData = () => {
+	return {
+		type: REMOVE_DATA
 	}
 }

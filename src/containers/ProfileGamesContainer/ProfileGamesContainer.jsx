@@ -1,10 +1,12 @@
 import React, { Container } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Link } from 'react-router-dom';
 
 import './ProfileGamesContainer.css';
 
 import ProfileGamesList from '../../components/ProfileGamesList/ProfileGamesList.jsx';
+import Button from '../../components/Button/Button.jsx';
 import Preloader from '../../components/Preloader/Preloader.jsx';
 import { updateSortFields } from '../../actions/actions';
 
@@ -22,7 +24,7 @@ class ProfileGamesContainer extends React.Component {
 		return(
 			<div>
 				<div className="steam-profile-games-titles" >
-					<div className="profile-game-img-title"></div>
+					<div className="profile-game-img-title"><Link to="/"><Button btnName="Back" /></Link></div>
 					<div className="profile-game-name-title">Name</div>
 					<div className="profile-game-id-title">App ID</div>
 					<div className="profile-playtime-title" onClick={this.handleSort}>Play time</div>

@@ -1,4 +1,4 @@
-import { UPDATE_SORT_FIELDS } from '../actions/actions';
+import { UPDATE_SORT_FIELDS, REMOVE_DATA } from '../actions/actions';
 
 const initialState = localStorage.getItem('sortFields') ? JSON.parse(localStorage.getItem('sortFields')) : { sortBy: "desc" };
 
@@ -9,6 +9,10 @@ const sortFields = (state = initialState, action) => {
 				...state,
 				sortBy: action.sortBy
 			};
+		case REMOVE_DATA :
+			return 	{ 
+				sortBy: "desc" 
+			}
 	}	
 	return state;
 }
