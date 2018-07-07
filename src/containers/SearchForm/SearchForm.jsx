@@ -23,9 +23,6 @@ class SearchForm extends React.Component {
 	}
 
 	removeData = () => {
-		this.setState({
-			inputValue: ''
-		});
 		this.props.dispatch(this.props.steamActions.removeData);
 	}
 

@@ -36,11 +36,6 @@ const queries = (state = initialState, action) => {
 			return {
 				...state, levelSteam: action.levelSteam			
 			}
-		case REMOVE_DATA :
-			return 	{
-				steamId: "",
-				loading: false
-			};
 	}
 
 	return state;
