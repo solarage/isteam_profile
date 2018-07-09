@@ -27,3 +27,13 @@ p {
 	content: "▼";
 	font-size: 15px;
 }
+
+.profile-game-name-title {
+	cursor: pointer;
+}
+
+.profile-game-name-title::after {
+	content: "▼";
+	font-size: 15px;
+}
+

@@ -1,0 +1,30 @@
+.pagi{
+	display: flex;
+	justify-content: center;
+	list-style:none;
+}
+.pagi li {
+	height: 30px;
+	width: 30px;
+	line-height:30px;
+	background: #6c757d;
+	color: #ffc107;
+	text-align: center;
+	border:1px solid #fff;
+}
+.pagi li:hover {
+	color: #000;
+	cursor: pointer;
+	background: #ffc107;
+}
+.pagi li:first-child {
+	border-radius:5px 0 0 5px;
+}
+.pagi li:last-child {
+	border-radius:0 5px 5px 0px;
+}
+.pagi li.active{
+	background: #ccc;
+	color: #000;
+}
+

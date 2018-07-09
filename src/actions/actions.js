@@ -143,10 +143,11 @@ export const updateInputField = (steamId) => {
 	}
 }
 
-export const updateSortFields = (sortBy) => {
+export const updateSortFields = (sortField, sortBy) => {
 	return {
 		type: UPDATE_SORT_FIELDS,
-		sortBy
+		sortField: sortField,
+		sortBy: sortBy
 	}
 }
 
